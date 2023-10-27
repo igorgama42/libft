@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: igama <igama@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/20 18:41:59 by igama             #+#    #+#             */
-/*   Updated: 2023/10/23 19:22:46 by igama            ###   ########.fr       */
+/*   Created: 2023/10/20 20:55:48 by igama             #+#    #+#             */
+/*   Updated: 2023/10/25 16:27:44 by igama            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void	*dest, const void	*src, size_t	n)
+char	*ft_strchr(const char	*str, int c)
 {
-	size_t			i;
-	char			*str1;
-	const char		*str2;
-
-	i = 0;
-	str1 = dest;
-	str2 = src;
-	while (str2[i] && i < n)
+	if (!str)
+		return NULL;
+	while (*str != c)
 	{
-		str1[i] = str2[i];
-		i++;
+		if (*str == '\0')
+			return (0);
+		str++;
 	}
-	return (0);
+	return ((char*) str);
 }

@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: igama <igama@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/20 20:55:48 by igama             #+#    #+#             */
-/*   Updated: 2023/10/23 17:20:42 by igama            ###   ########.fr       */
+/*   Created: 2023/10/20 21:21:21 by igama             #+#    #+#             */
+/*   Updated: 2023/10/25 17:58:22 by igama            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char	*str, int c)
+int	ft_strncmp(const char	*str1, const char	*str2, size_t	num)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
-	while (i >= 0)
+	if (num == 0)
+		return (0);
+	while ((str1[i] || str2[i]) && (str1[i] == str2[i]) && i < num - 1)
 	{
-		if (str[i] == c)
-			return ((char *)str + i);
 		i++;
 	}
-	return (0);
+	return (((unsigned char) str1[i] - (unsigned char) str2[i]));
 }
