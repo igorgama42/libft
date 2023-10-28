@@ -6,11 +6,9 @@
 /*   By: igama <igama@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 17:10:29 by igama             #+#    #+#             */
-/*   Updated: 2023/10/23 17:21:04 by igama            ###   ########.fr       */
+/*   Updated: 2023/10/27 21:17:37 by igama            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 char	*ft_strrchr(const char	*str, int c)
 {

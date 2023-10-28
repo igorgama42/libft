@@ -6,11 +6,11 @@
 /*   By: igama <igama@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 18:41:59 by igama             #+#    #+#             */
-/*   Updated: 2023/10/25 17:03:32 by igama            ###   ########.fr       */
+/*   Updated: 2023/10/27 21:20:12 by igama            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+# include "libft.h"
 
 void	*ft_memcpy(void	*dest, const void	*src, size_t	n)
 {
@@ -22,7 +22,7 @@ void	*ft_memcpy(void	*dest, const void	*src, size_t	n)
 	str1 = dest;
 	str2 = src;
 	if (!str1 || !str2)
-		return NULL;
+		return (NULL);
 	while (i < n)
 	{
 		if (!str1)
