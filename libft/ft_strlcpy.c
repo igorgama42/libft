@@ -6,11 +6,11 @@
 /*   By: igama <igama@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 21:40:38 by igama             #+#    #+#             */
-/*   Updated: 2023/10/27 21:20:37 by igama            ###   ########.fr       */
+/*   Updated: 2023/10/28 14:51:00 by igama            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "libft.h"
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {

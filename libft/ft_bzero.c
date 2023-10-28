@@ -6,11 +6,11 @@
 /*   By: igama <igama@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 18:12:26 by igama             #+#    #+#             */
-/*   Updated: 2023/10/27 21:04:51 by igama            ###   ########.fr       */
+/*   Updated: 2023/10/28 14:51:17 by igama            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "libft.h"
+#include "libft.h"
 
 void	ft_bzero(void	*s, size_t	n)
 {

@@ -6,11 +6,11 @@
 /*   By: igama <igama@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 16:54:41 by igama             #+#    #+#             */
-/*   Updated: 2023/10/27 21:20:43 by igama            ###   ########.fr       */
+/*   Updated: 2023/10/28 14:50:36 by igama            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "libft.h"
+#include "libft.h"
 
 size_t	ft_strlen(const char *str)
 {

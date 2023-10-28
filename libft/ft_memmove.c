@@ -6,11 +6,11 @@
 /*   By: igama <igama@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 17:16:43 by igama             #+#    #+#             */
-/*   Updated: 2023/10/27 21:20:17 by igama            ###   ########.fr       */
+/*   Updated: 2023/10/28 14:50:21 by igama            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "libft.h"
+#include "libft.h"
 
 void	*ft_memmove(void *str1, const void *str2, size_t n)
 {

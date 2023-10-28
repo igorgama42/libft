@@ -6,7 +6,7 @@
 /*   By: igama <igama@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 17:36:56 by igama             #+#    #+#             */
-/*   Updated: 2023/10/27 21:21:56 by igama            ###   ########.fr       */
+/*   Updated: 2023/10/28 16:04:23 by igama            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,7 @@ int		ft_tolower(int ch);
 void	*ft_memset(void *s, int c, size_t n);
 int		ft_toupper(int ch);
 void	*ft_memmove(void *str1, const void *str2, size_t n);
+void	*ft_memchr(const void *str, int c, size_t n);
+int		ft_memcmp(const void *str1, const void *str2, size_t n);
 
 #endif

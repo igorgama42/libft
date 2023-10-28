@@ -6,11 +6,11 @@
 /*   By: igama <igama@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 18:41:59 by igama             #+#    #+#             */
-/*   Updated: 2023/10/27 21:20:12 by igama            ###   ########.fr       */
+/*   Updated: 2023/10/28 14:51:26 by igama            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "libft.h"
+#include "libft.h"
 
 void	*ft_memcpy(void	*dest, const void	*src, size_t	n)
 {
