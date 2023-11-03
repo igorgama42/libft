@@ -6,7 +6,7 @@
 /*   By: igama <igama@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 17:36:56 by igama             #+#    #+#             */
-/*   Updated: 2023/11/03 13:07:07 by igama            ###   ########.fr       */
+/*   Updated: 2023/11/03 14:36:44 by igama            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,6 @@ void	*ft_memchr(const void *str, int c, size_t n);
 int		ft_memcmp(const void *str1, const void *str2, size_t n);
 char	*ft_strrchr(const char *str, int c);
 char	*ft_strdup(const char *s);
+char	*ft_strnstr(const char *big, const char *little, size_t len);
 
 #endif
