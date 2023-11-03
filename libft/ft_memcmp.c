@@ -6,15 +6,15 @@
 /*   By: igama <igama@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 15:56:27 by igama             #+#    #+#             */
-/*   Updated: 2023/10/29 18:06:47 by igama            ###   ########.fr       */
+/*   Updated: 2023/11/03 13:55:21 by igama            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_memcmp(const void *str1, const void *str2, size_t n)
+int	ft_memcmp(const void *str1, const void *str2, size_t n)
 {
-	size_t			i;
+	size_t				i;
 	unsigned const char	*s1;
 	unsigned const char	*s2;
 
