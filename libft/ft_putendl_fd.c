@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: igama <igama@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/23 17:10:29 by igama             #+#    #+#             */
-/*   Updated: 2023/11/05 19:49:37 by igama            ###   ########.fr       */
+/*   Created: 2023/11/05 20:01:18 by igama             #+#    #+#             */
+/*   Updated: 2023/11/05 21:13:07 by igama            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strrchr(const char *s, int c)
-{
-	int	i;
+#include "libft.h"
 
-	i = 0;
-	while (s[i])
-		i++;
-	while (i >= 0)
+void	ft_putendl_fd(char *s, int fd)
+{
+	while (*s)
 	{
-		if (s[i] == c)
-			return ((char *)s + i);
-		i--;
+		write(fd, s, 1);
+		s++;
 	}
-	return (0);
+	write(fd, "\n", 1);
 }

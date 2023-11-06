@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: igama <igama@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/23 17:10:29 by igama             #+#    #+#             */
-/*   Updated: 2023/11/05 19:49:37 by igama            ###   ########.fr       */
+/*   Created: 2023/11/05 21:01:30 by igama             #+#    #+#             */
+/*   Updated: 2023/11/05 21:16:03 by igama            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strrchr(const char *s, int c)
-{
-	int	i;
+#include "libft.h"
 
-	i = 0;
-	while (s[i])
-		i++;
-	while (i >= 0)
+void	ft_putnbr_fd(int n, int fd)
+{
+	if (n == -2147483648)
+		write(fd, "-2147483648", 11);
+	if (n < 0 && n > -2147483648)
 	{
-		if (s[i] == c)
-			return ((char *)s + i);
-		i--;
+		ft_putchar_fd('-', fd);
+		n = -n;
 	}
-	return (0);
+	if (n > 9)
+	{
+		ft_putnbr_fd(n / 10, fd);
+		ft_putnbr_fd(n % 10, fd);
+	}
+	if (n <= 9 && n >= 0)
+		ft_putchar_fd(n + '0', fd);
 }

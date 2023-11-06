@@ -6,28 +6,27 @@
 /*   By: igama <igama@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 17:16:43 by igama             #+#    #+#             */
-/*   Updated: 2023/10/28 14:50:21 by igama            ###   ########.fr       */
+/*   Updated: 2023/11/05 19:00:33 by igama            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *str1, const void *str2, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	size_t		i;
 	char		*s1;
 	const char	*s2;
 
-	i = 0;
-	s1 = (char *)str1;
-	s2 = (char *)str2;
-	if (str1 < str2)
+	i = -1;
+	s1 = (char *)dest;
+	s2 = (char *)src;
+	if (!dest && !src)
+		return (NULL);
+	if (s1 < s2)
 	{
-		while (i < n)
-		{
+		while (++i < n)
 			s1[i] = s2[i];
-			i++;
-		}
 	}
 	else
 	{

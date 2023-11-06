@@ -6,15 +6,15 @@
 /*   By: igama <igama@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 20:53:31 by igama             #+#    #+#             */
-/*   Updated: 2023/10/27 21:17:46 by igama            ###   ########.fr       */
+/*   Updated: 2023/11/05 19:51:50 by igama            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_tolower(int ch)
+int	ft_tolower(int c)
 {
-	if (ch >= 'A' && ch <= 'Z')
+	if (c >= 'A' && c <= 'Z')
 	{
-		ch += 32;
+		c += 32;
 	}
-	return (ch);
+	return (c);
 }

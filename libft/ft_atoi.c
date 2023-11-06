@@ -6,11 +6,11 @@
 /*   By: igama <igama@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 21:12:45 by igama             #+#    #+#             */
-/*   Updated: 2023/10/27 21:00:29 by igama            ###   ########.fr       */
+/*   Updated: 2023/11/05 18:56:24 by igama            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(const char	*str)
+int	ft_atoi(const char *nptr)
 {
 	int	ct;
 	int	minus;
@@ -19,19 +19,19 @@ int	ft_atoi(const char	*str)
 	ct = 0;
 	minus = 1;
 	nbr = 0;
-	while (str[ct] == ' ' || (str[ct] >= 9 && str[ct] <= 13))
+	while (nptr[ct] == ' ' || (nptr[ct] >= 9 && nptr[ct] <= 13))
 		ct++;
-	if (str[ct] == '-')
+	if (nptr[ct] == '-')
 	{
 		minus *= -1;
 		ct++;
 	}
-	else if (str[ct] == '+')
+	else if (nptr[ct] == '+')
 		ct++;
-	while (str[ct] >= '0' && str[ct] <= '9')
+	while (nptr[ct] >= '0' && nptr[ct] <= '9')
 	{
 		nbr *= 10;
-		nbr += str[ct] - '0';
+		nbr += nptr[ct] - '0';
 		ct++;
 	}
 	return (nbr * minus);

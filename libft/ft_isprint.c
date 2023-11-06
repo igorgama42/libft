@@ -6,13 +6,13 @@
 /*   By: igama <igama@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 16:15:55 by igama             #+#    #+#             */
-/*   Updated: 2023/10/27 21:01:17 by igama            ###   ########.fr       */
+/*   Updated: 2023/11/05 18:57:58 by igama            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(int arg)
+int	ft_isprint(int c)
 {
-	if (arg >= 32 && arg <= 126)
+	if (c >= 32 && c <= 126)
 		return (1);
 	return (0);
 }

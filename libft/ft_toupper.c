@@ -6,15 +6,15 @@
 /*   By: igama <igama@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 20:48:18 by igama             #+#    #+#             */
-/*   Updated: 2023/10/27 21:17:53 by igama            ###   ########.fr       */
+/*   Updated: 2023/11/05 19:52:12 by igama            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_toupper(int ch)
+int	ft_toupper(int c)
 {
-	if (ch >= 'a' && ch <= 'z')
+	if (c >= 'a' && c <= 'z')
 	{
-		ch -= 32;
+		c -= 32;
 	}
-	return (ch);
+	return (c);
 }

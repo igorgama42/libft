@@ -6,15 +6,13 @@
 /*   By: igama <igama@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 15:08:42 by igama             #+#    #+#             */
-/*   Updated: 2023/10/24 17:53:42 by igama            ###   ########.fr       */
+/*   Updated: 2023/11/05 18:57:47 by igama            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int	ft_isdigit(int arg)
+int	ft_isdigit(int c)
 {
-	if (arg >= '0' && arg <= '9')
+	if (c >= '0' && c <= '9')
 		return (1);
 	return (0);
 }
