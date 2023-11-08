@@ -6,7 +6,7 @@
 /*   By: igama <igama@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 19:34:31 by igama             #+#    #+#             */
-/*   Updated: 2023/11/05 17:21:31 by igama            ###   ########.fr       */
+/*   Updated: 2023/11/08 18:42:17 by igama            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	if ((len == 0) || i >= ft_strlen(s))
 		str[i] = '\0';
-	while (i < ft_strlen(s))
+	while (i < ft_strlen(s) && j < len)
 	{
-		while (j < len)
-			str[j++] = s[i++];
-		i++;
+		str[j++] = s[i++];
 	}
 	str[j] = '\0';
 	return (str);

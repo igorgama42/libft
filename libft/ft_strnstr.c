@@ -6,7 +6,7 @@
 /*   By: igama <igama@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 14:08:22 by igama             #+#    #+#             */
-/*   Updated: 2023/11/05 15:53:05 by igama            ###   ########.fr       */
+/*   Updated: 2023/11/08 18:01:57 by igama            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	ct2;
 
 	ct1 = 0;
-	ct2 = 0;
-	if (len == 0)
-		return ((char *)big);
-	else if (little[ct1] == '\0')
+	if (len == 0 || little[ct1] == '\0')
 		return ((char *)big);
 	while (big[ct1] && ct1 < len)
 	{

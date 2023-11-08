@@ -6,7 +6,7 @@
 /*   By: igama <igama@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 18:59:57 by igama             #+#    #+#             */
-/*   Updated: 2023/11/01 17:20:30 by igama            ###   ########.fr       */
+/*   Updated: 2023/11/08 18:41:58 by igama            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,25 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-  size_t  ct1;
-  size_t  ct2;
+	size_t	ct1;
+	size_t	ct2;
 
-  ct1 = 0;
-  ct2 = 0;
-  while (dst[ct1] && ct1 < dstsize)
-  {
-    ct1++;
-  }
-  if (dstsize > 0)
-  {
-  	while (src[ct2] && ((ct1 + ct2) < dstsize - 1))
-  	{
-    	dst[ct1 + ct2] = src[ct2];
-    	ct2++;
-  	}
-  }
-  if (ct1 < dstsize)
-    dst[ct1 + ct2] = '\0';
+	ct1 = 0;
+	ct2 = 0;
+	while (dst[ct1] && ct1 < dstsize)
+	{
+		ct1++;
+	}
+	if (dstsize > 0)
+	{
+		while (src[ct2] && ((ct1 + ct2) < dstsize - 1))
+		{
+			dst[ct1 + ct2] = src[ct2];
+			ct2++;
+		}
+	}
+	if (ct1 < dstsize)
+		dst[ct1 + ct2] = '\0';
 	return (ft_strlen(src) + ct1);
 }
 
