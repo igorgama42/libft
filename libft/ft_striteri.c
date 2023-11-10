@@ -1,38 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: igama <igama@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/20 21:12:45 by igama             #+#    #+#             */
-/*   Updated: 2023/11/09 16:39:50 by igama            ###   ########.fr       */
+/*   Created: 2023/11/09 20:54:32 by igama             #+#    #+#             */
+/*   Updated: 2023/11/09 20:58:07 by igama            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(const char *nptr)
+void ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	int	ct;
-	int	minus;
-	int	nbr;
+	unsigned int	i;
 
-	ct = 0;
-	minus = 1;
-	nbr = 0;
-	while (nptr[ct] == ' ' || (nptr[ct] >= 9 && nptr[ct] <= 13))
-		ct++;
-	if (nptr[ct] == '-')
+	i = 0;
+	while (s[i])
 	{
-		minus *= -1;
-		ct++;
+		f(i, &s[i]);
+		i++;
 	}
-	else if (nptr[ct] == '+')
-		ct++;
-	while (nptr[ct] >= '0' && nptr[ct] <= '9')
-	{
-		nbr *= 10;
-		nbr += nptr[ct] - '0';
-		ct++;
-	}
-	return (nbr * minus);
 }

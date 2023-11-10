@@ -1,47 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: igama <igama@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/08 18:49:11 by igama             #+#    #+#             */
-/*   Updated: 2023/11/09 18:20:52 by igama            ###   ########.fr       */
+/*   Created: 2023/11/09 20:58:32 by igama             #+#    #+#             */
+/*   Updated: 2023/11/09 21:10:28 by igama            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t	i;
-	char	*str1;
+	unsigned int	i;
+	char			*str;
 
 	i = 0;
-	if (!s1)
+	if (!s)
 		return (0);
-	str1 = (char *) malloc(sizeof(char) * ((i) + 1));
-	if (!str1 || !set)
+	str = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
+	if (!str)
 		return (0);
-	while (*s1 && ft_strchr(set, *s1))
-		s1++;
-	i = ft_strlen(s1);
-	while (i && (ft_strchr(set, s1[i])))
+	while (s[i])
 	{
-		i--;
+		str[i] = f(i, s[i]);
+		i++;
 	}
-	return (ft_substr(s1, 0, i + 1));
+	str[i] = '\0';
+	return (str);
 }
-
-/*#include <stdio.h>
-
-int	main(void)
-{
-	char	s1[] = "-- Teste - de - Strtrim ---";
-	char	s2[] = "-";
-	char	*s3;
-
-	s3 = ft_strtrim(s1, s2);
-	printf("%s", s3);
-
-}*/
