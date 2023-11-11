@@ -6,17 +6,20 @@
 /*   By: igama <igama@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 20:55:48 by igama             #+#    #+#             */
-/*   Updated: 2023/11/09 14:10:59 by igama            ###   ########.fr       */
+/*   Updated: 2023/11/11 05:22:50 by igama            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s != c)
-	{
-		if (*s == '\0')
-			return (0);
-		s++;
-	}
-	return ((char *) s);
+	char	temp_ch;
+	int		i;
+
+	temp_ch = c;
+	i = 0;
+	while (*(s + i) && (*(s + i) != temp_ch))
+		i++;
+	if (*(s + i) == temp_ch)
+		return ((char *) s + i);
+	return (0);
 }

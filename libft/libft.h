@@ -6,7 +6,7 @@
 /*   By: igama <igama@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 17:36:56 by igama             #+#    #+#             */
-/*   Updated: 2023/11/09 21:01:23 by igama            ###   ########.fr       */
+/*   Updated: 2023/11/11 02:04:59 by igama            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,6 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_itoa(int n);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 char	*ft_strmapi(char const*s, char (*f)(unsigned int, char));
+char	**ft_split(char const *str, char delimiter);
 
 #endif

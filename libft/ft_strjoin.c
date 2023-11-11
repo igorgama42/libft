@@ -6,7 +6,7 @@
 /*   By: igama <igama@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 15:24:48 by igama             #+#    #+#             */
-/*   Updated: 2023/11/08 18:47:26 by igama            ###   ########.fr       */
+/*   Updated: 2023/11/11 05:03:07 by igama            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,21 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int		i;
-	char	*new_str;
-	size_t	sum;
+	char	*str;
+	int		len_sum;
+	int		len_s1;
+	int		len_s2;
 
-	i = 0;
-	sum = ((ft_strlen(s1)) + (ft_strlen(s2) + 1));
-	new_str = (char *) malloc(sizeof(char) * (sum));
-	if (!new_str)
-		return (0);
-	while (*s1 && *new_str)
-	{
-		new_str[i] = *s1;
-		i++;
-		s1++;
-	}
-	while (*s2 && *new_str)
-	{
-		new_str[i] = *s2;
-		i++;
-		s2++;
-	}
-	new_str[i] = '\0';
-	return (new_str);
+	if (!s1 || !s2)
+		return (NULL);
+	len_s1 = ft_strlen(s1);
+	len_s2 = ft_strlen(s2);
+	len_sum = len_s1 + len_s2 + 1;
+	str = malloc(sizeof(char) * (len_sum));
+	if (!str)
+		return (NULL);
+	ft_memcpy(str, s1, len_s1);
+	ft_memcpy(str + len_s1, s2, len_s2);
+	str[len_sum - 1] = '\0';
+	return (str);
 }

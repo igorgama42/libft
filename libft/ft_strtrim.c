@@ -6,7 +6,7 @@
 /*   By: igama <igama@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 18:49:11 by igama             #+#    #+#             */
-/*   Updated: 2023/11/09 18:20:52 by igama            ###   ########.fr       */
+/*   Updated: 2023/11/10 20:10:28 by igama            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,15 @@
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	i;
-	char	*str1;
 
 	i = 0;
-	if (!s1)
-		return (0);
-	str1 = (char *) malloc(sizeof(char) * ((i) + 1));
-	if (!str1 || !set)
+	if (!s1 || !set)
 		return (0);
 	while (*s1 && ft_strchr(set, *s1))
 		s1++;
 	i = ft_strlen(s1);
 	while (i && (ft_strchr(set, s1[i])))
-	{
 		i--;
-	}
 	return (ft_substr(s1, 0, i + 1));
 }
 
