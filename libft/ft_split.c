@@ -13,44 +13,44 @@
 #include "libft.h"
 
 // Function to count the amount of words in the matrix
-static int	ft_count_words(const char *str, char delimiter)
+static int	ft_count_words(const char *str, char separator)
 {
-	int	words_quant;
+	int	words;
 
-	words_quant = 0;
+	words = 0;
 	while (*str)
 	{
-		if (*str != delimiter && (*(str + 1) == delimiter || !*(str + 1)))
-			words_quant++;
+		if (*str != separator && (*(str + 1) == separator || !*(str + 1)))
+			words++;
 		str++;
 	}
-	return (words_quant);
+	return (words);
 }
 
-char	**ft_split(char const *str, char delimiter)
+char	**ft_split(char const *s, char c)
 {
-	char	**array;
+	char	**new_array;
 	int		word_num;
-	int		index;
-	int		start_pos;
+	int		i;
+	int		start;
 
-	if (!str)
+	if (!s)
 		return (NULL);
-	array = ft_calloc(ft_count_words(str, delimiter) + 1, sizeof(char *));
-	if (!array)
+	new_array = ft_calloc(ft_count_words(s, c) + 1, sizeof(char *));
+	if (!new_array)
 		return (NULL);
-	index = 0;
+	i = 0;
 	word_num = 0;
-	while (str[index])
+	while (s[i])
 	{
-		while (str[index] != 0 && str[index] == delimiter)
-			index++;
-		start_pos = index;
-		while (str[index] != 0 && str[index] != delimiter)
-			index++;
-		if (word_num < ft_count_words(str, delimiter))
-			array[word_num] = ft_substr(str, start_pos, index - start_pos);
+		while (s[i] != 0 && s[i] == c)
+			i++;
+		start = i;
+		while (s[i] != 0 && s[i] != c)
+			i++;
+		if (word_num < ft_count_words(s, c))
+			new_array[word_num] = ft_substr(s, start, i - start);
 		word_num++;
 	}
-	return (array);
+	return (new_array);
 }
