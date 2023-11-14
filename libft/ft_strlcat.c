@@ -6,7 +6,7 @@
 /*   By: igama <igama@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 18:59:57 by igama             #+#    #+#             */
-/*   Updated: 2023/11/10 13:55:07 by igama            ###   ########.fr       */
+/*   Updated: 2023/11/13 20:16:15 by igama            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 
 	ct1 = 0;
 	ct2 = 0;
+	if ((!dst || !src) && !dstsize)
+		return (0);
 	while (dst[ct1] && ct1 < dstsize)
 	{
 		ct1++;
